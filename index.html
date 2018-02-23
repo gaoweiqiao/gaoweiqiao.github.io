@@ -13,7 +13,7 @@
             var metaEl = document.createElement('meta');
             metaEl.setAttribute('name', 'viewport');
             var scale = 1 / window.devicePixelRatio;
-            metaEl.setAttribute('content',"initial-scale="+scale+", maximum-scale="+scale+", minimum-scale="+scale+", user-scalable=no");
+            metaEl.setAttribute('content',"width=device-width,initial-scale="+scale+", maximum-scale="+scale+", minimum-scale="+scale+", user-scalable=no");
             document.documentElement.firstElementChild.insertBefore(metaEl,document.head.firstElementChild.nextElementSibling);
           }
           function initRem(){
