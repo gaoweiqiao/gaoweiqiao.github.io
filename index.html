@@ -5,6 +5,9 @@
         height: 100%;
         overflow-x: hidden;
         overflow-y: scroll;
+      }
+      div{
+        -webkit-tap-highlight-color: transparent;
       }</style><script>(function(){
           if(window.devicePixelRatio){
             var metaEl = document.createElement('meta');
@@ -13,5 +16,11 @@
             metaEl.setAttribute('content',"initial-scale="+scale+", maximum-scale="+scale+", minimum-scale="+scale+", user-scalable=no");
             document.documentElement.firstElementChild.appendChild(metaEl);
           }
-          document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.2 + 'px';
+          function initRem(){
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.2 + 'px';
+          }
+          var resizeEvt =  'orientationchange' in window ? 'orientationchange' : 'resize';
+          window.addEventListener(resizeEvt, initRem, false);
+          document.addEventListener('DOMContentLoaded', initRem, false);
+          initRem();
       }());</script><link href=/static/css/app.a1cb5d11cba59da35f7002c14f1d0dea.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/static/js/manifest.2ae2e69a05c33dfc65f8.js></script><script type=text/javascript src=/static/js/vendor.7a4038aec4b29777472a.js></script><script type=text/javascript src=/static/js/app.1abd6322fad76a72d089.js></script></body></html>
