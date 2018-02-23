@@ -14,7 +14,7 @@
             metaEl.setAttribute('name', 'viewport');
             var scale = 1 / window.devicePixelRatio;
             metaEl.setAttribute('content',"initial-scale="+scale+", maximum-scale="+scale+", minimum-scale="+scale+", user-scalable=no");
-            document.documentElement.firstElementChild.appendChild(metaEl);
+            document.documentElement.firstElementChild.insertBefore(metaEl,document.title);
           }
           function initRem(){
             document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.2 + 'px';
@@ -23,5 +23,5 @@
           window.addEventListener(resizeEvt, initRem, false);
           document.addEventListener('DOMContentLoaded', initRem, false);
           initRem();
-
+          document.body.fontSize='20px';
       }());</script><link href=/static/css/app.a1cb5d11cba59da35f7002c14f1d0dea.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/static/js/manifest.2ae2e69a05c33dfc65f8.js></script><script type=text/javascript src=/static/js/vendor.7a4038aec4b29777472a.js></script><script type=text/javascript src=/static/js/app.1abd6322fad76a72d089.js></script></body></html>
